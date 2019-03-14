@@ -1,3 +1,33 @@
-.navbar {
+.navbar-custom {
     padding: 2rem;
 } 
+
+.navbar-nav .nav-item.nav-link {
+    color: $color-primary-dark;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:hover {
+        color: $color-primary-light;
+    }
+    
+    &:not(:last-child) {
+        margin-right: 2rem;
+    }
+}
+
+.logo {
+
+    &__img {
+        position: absolute; 
+        width:12rem; 
+        top:0.5rem; 
+        z-index: 2;
+    }
+
+    &__text {
+        position: absolute;
+        left: 17.5rem;
+        top: 1.5rem;
+    }
+}

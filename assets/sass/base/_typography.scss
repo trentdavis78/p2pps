@@ -5,3 +5,36 @@ body {
     line-height: 1.7;
     color: #1d1d1d;
 }
+
+.logo__text {
+    color: $color-primary;
+    font-family: Roboto, sans-serif;
+    line-height: 1;
+  
+    &--primary, &--secondary {
+        display: block;
+    }
+
+    &--primary {
+        font-size: 2.75rem;     
+        font-weight: 700;   
+        border-bottom: .3rem solid $color-primary;
+        margin-left: -.5rem;
+       
+    }
+
+    &--secondary {
+        font-size: 1.7rem;
+        font-style: italic;        
+        letter-spacing: .33rem;
+        padding-top: .3rem;
+        text-align: center;
+        font-weight: 500;
+        text-transform: uppercase;
+       
+    }
+} 
+
+.card-custom {
+    font-size: 2rem;
+}
