@@ -16,32 +16,44 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <script>
+      function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+          elmnt = z[i];
+          /*search for elements with a certain atrribute:*/
+          file = elmnt.getAttribute("w3-include-html");
+          if (file) {
+            /*make an HTTP request using the attribute value as the file name:*/
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4) {
+                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                /*remove the attribute, and call this function once more:*/
+                elmnt.removeAttribute("w3-include-html");
+                includeHTML();
+              }
+            }      
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /*exit the function:*/
+            return;
+          }
+        }
+      };
+      </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <a class="navbar-brand ml-5" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto mr-5">
-            <a class="nav-item nav-link active" href="#">Welcome</a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>            
-          </div>
-        </div>
-      </nav>
-      <div class="jumbotron jumbotron-fluid jumbotron--home">
-        <div class="container jumbotron-text">
-          <h1 class="display-4 text-white">Fluid jumbotron</h1>
-          <p class="text-white">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-        </div>
-      </div>
+      <div w3-include-html="header.html"></div> 
       <div class="container">
           <main style="min-height:800px;">
-
+            <h2>This is content</h2>
           </main>
       </div>
+      <div w3-include-html="footer.html"></div> 
 <!-- begin js files-->
 <!-- includes Bootstrap v4.2.1, JQuery v3.3.1 -->
 <script src="https://code.jquery.com/jquery-3.3.1.js"

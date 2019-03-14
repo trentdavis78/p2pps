@@ -1,3 +1,5 @@
+includeHTML();
+
 $(document).ready(function(){
  
 });
