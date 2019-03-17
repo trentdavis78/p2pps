@@ -29,6 +29,16 @@
            }
             
         }
-    }    
+    } 
+    
+    &__footer {
+
+        h3 {
+            text-transform: uppercase;
+            color: $color-grey-medium;
+            font-weight: 600;
+            font-size: 1.6rem;
+        }
+    }
 
 }
