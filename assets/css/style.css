@@ -18,6 +18,15 @@
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.fadeIn {
+  animation: fadeIn 1s ease-out; }
+
 *,
 *::after,
 *::before {
@@ -270,9 +279,11 @@ h2 {
     height: 50rem;
     background-size: cover; }
     .jumbotron__header--img-home {
-      background-image: url(../images/tx-flag16de.jpg); }
+      background-image: url(../images/tx-flag.jpg); }
     .jumbotron__header--img-sop {
-      background-image: url(../images/court16de.jpg); }
+      background-image: url(../images/court.jpg); }
+    .jumbotron__header--img-contact {
+      background-image: url(../images/contact-us.jpg); }
 
 .price-table__row__price {
   background-color: #fff;
@@ -309,7 +320,8 @@ h2 {
   color: #fff;
   font-weight: 700;
   min-height: 6.5rem;
-  box-shadow: 0.75rem 0.75rem 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0.75rem 0.75rem 0 rgba(0, 0, 0, 0.2);
+  font-size: 1.6rem; }
   .price-table__row__desc--reg {
     background-color: #217a3b; }
   .price-table__row__desc--rush {

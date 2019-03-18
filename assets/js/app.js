@@ -44,6 +44,10 @@ $(document).ready(function(){
     function priceInit(area) {
         switch (area) {
             case "travis_wilco":
+                $(".price-table__row__price--text").removeClass('fadeIn');
+                setTimeout(function(){
+                    $(".price-table__row__price--text").addClass('fadeIn');
+                }, 10);                
                 $("#priceReg").text("$" + prices.travis_wilco.reg);
                 $("#priceRush").text("$" + prices.travis_wilco.rush);
                 $("#pricePriority").text("$" + prices.travis_wilco.priority);
@@ -51,6 +55,10 @@ $(document).ready(function(){
                 break;
 
             case "statewide":
+                $(".price-table__row__price--text").removeClass('fadeIn');
+                setTimeout(function(){
+                    $(".price-table__row__price--text").addClass('fadeIn');
+                }, 10); 
                 $("#priceReg").text("$" + prices.statewide.reg);
                 $("#priceRush").text("$" + prices.statewide.rush);
                 $("#pricePriority").text("$" + prices.statewide.priority);
@@ -58,6 +66,10 @@ $(document).ready(function(){
             break;
 
             case "nationwide":
+                $(".price-table__row__price--text").removeClass('fadeIn');
+                setTimeout(function(){
+                    $(".price-table__row__price--text").addClass('fadeIn');
+                }, 10); 
                 $("#priceReg").text("$" + prices.nationwide.reg);
                 $("#priceRush").text("$" + prices.nationwide.rush);
                 $("#pricePriority").text("$" + prices.nationwide.priority);
@@ -67,8 +79,49 @@ $(document).ready(function(){
     }
 
     function initPriceTables() {
+       
         $("#travis_wilco").click();
     }
 
     initPriceTables();
 });
+
+(function ($) {
+    'use strict';
+
+    var form = $('.contact__form'),
+        message = $('.contact__msg'),
+        form_data;
+
+    // Success function
+    function done_func(response) {
+        message.fadeIn()
+        message.html(response);
+        setTimeout(function () {
+            message.fadeOut();
+        }, 5000);
+        
+        form.find('input:not([type="submit"]), textarea').val('');
+    }
+
+    // fail function
+    function fail_func(data) {
+        message.fadeIn()
+        message.html(data.responseText);
+        setTimeout(function () {
+            message.fadeOut(5000);
+        }, 5000);
+    }
+    
+    form.submit(function (e) {
+        e.preventDefault();
+        form_data = $(this).serialize();
+        $.ajax({
+            type: 'POST',
+            url: form.attr('action'),
+            data: form_data
+        })
+        .done(done_func)
+        .fail(fail_func);
+    });
+})(jQuery);

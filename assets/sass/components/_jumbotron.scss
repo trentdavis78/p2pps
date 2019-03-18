@@ -19,11 +19,14 @@
         background-size: cover;       
 
         &-home {
-            background-image: url(../images/tx-flag16de.jpg);
+            background-image: url(../images/tx-flag.jpg);
         }
 
         &-sop {
-            background-image: url(../images/court16de.jpg);
+            background-image: url(../images/court.jpg);
+        }
+        &-contact {
+            background-image: url(../images/contact-us.jpg);
         }
     }
     

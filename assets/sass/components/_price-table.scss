@@ -1,7 +1,4 @@
 
-.price-table__row {
-    
-} 
 .price-table__row__price {
     background-color: $color-white;
     text-align: center;
@@ -46,6 +43,7 @@
     font-weight: 700;
     min-height: 6.5rem;
     box-shadow: .75rem .75rem 0 rgba($color-black, .2);
+    font-size: 1.6rem;
     &--reg {
         background-color: $color-green;        
     }
