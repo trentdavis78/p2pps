@@ -47,33 +47,35 @@ $(document).ready(function(){
                 $(".price-table__row__price--text").removeClass('fadeIn');
                 setTimeout(function(){
                     $(".price-table__row__price--text").addClass('fadeIn');
-                }, 10);                
-                $("#priceReg").text("$" + prices.travis_wilco.reg);
-                $("#priceRush").text("$" + prices.travis_wilco.rush);
-                $("#pricePriority").text("$" + prices.travis_wilco.priority);
-                $("#priceSameDay").text("$" + prices.travis_wilco.sameday);
+                    $("#priceReg").text("$" + prices.travis_wilco.reg);
+                    $("#priceRush").text("$" + prices.travis_wilco.rush);
+                    $("#pricePriority").text("$" + prices.travis_wilco.priority);
+                    $("#priceSameDay").text("$" + prices.travis_wilco.sameday);
+                }, 50);                
                 break;
 
             case "statewide":
                 $(".price-table__row__price--text").removeClass('fadeIn');
                 setTimeout(function(){
                     $(".price-table__row__price--text").addClass('fadeIn');
-                }, 10); 
-                $("#priceReg").text("$" + prices.statewide.reg);
-                $("#priceRush").text("$" + prices.statewide.rush);
-                $("#pricePriority").text("$" + prices.statewide.priority);
-                $("#priceSameDay").text("$" + prices.statewide.sameday);
+                    $("#priceReg").text("$" + prices.statewide.reg);
+                    $("#priceRush").text("$" + prices.statewide.rush);
+                    $("#pricePriority").text("$" + prices.statewide.priority);
+                    $("#priceSameDay").text("$" + prices.statewide.sameday);
+                }, 50); 
+
             break;
 
             case "nationwide":
                 $(".price-table__row__price--text").removeClass('fadeIn');
                 setTimeout(function(){
                     $(".price-table__row__price--text").addClass('fadeIn');
-                }, 10); 
-                $("#priceReg").text("$" + prices.nationwide.reg);
-                $("#priceRush").text("$" + prices.nationwide.rush);
-                $("#pricePriority").text("$" + prices.nationwide.priority);
-                $("#priceSameDay").text("$" + prices.nationwide.sameday);
+                    $("#priceReg").text("$" + prices.nationwide.reg);
+                    $("#priceRush").text("$" + prices.nationwide.rush);
+                    $("#pricePriority").text("$" + prices.nationwide.priority);
+                    $("#priceSameDay").text("$" + prices.nationwide.sameday);
+                }, 50); 
+
             break;
         }       
     }
