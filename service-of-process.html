@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Title</title>
+    <!-- Open Graph tags -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Meyer CSS reset-->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <!-- includes Bootstrap v4.2.1, FontAwesome v5.6.3-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Roboto:100,300,400,500,700,900"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("data-include-html");
+                if (file) {
+                    /*make an HTTP request using the attribute value as the file name:*/
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /*remove the attribute, and call this function once more:*/
+                            elmnt.removeAttribute("data-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /*exit the function:*/
+                    return;
+                }
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div data-include-html="header.html"></div>
+    <div class="jumbotron jumbotron-fluid jumbotron__header jumbotron__header--img jumbotron__header--img-sop">
+        <div class="container">
+            <div class="jumbotron__header__heading">
+                <h1 class="text-white jumbotron__header__heading--primary">Service of Process</h1>
+                <!-- <p class="jumbotron__header__heading--secondary text-white">Lorem ipsum dolor sit amet consectetur adipisicing
+          elit.</p> -->
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <main style="min-height:800px;">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 mt-3">
+                    <div class="price-table">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="price-table__row">
+                                <div class="price-table__row__price price-table__row__price--reg">
+                                    Regular <br><span class="price-table__row__price--cost">
+                                        $60
+                                    </span>
+                                </div>
+                                <div class="price-table__row__desc price-table__row__desc--reg">
+                                    First attempt within 5 days. <br>
+                                    All 3 attempts within 10 days.
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                                <div class="col-12">
+                                    <div class="price-table__row">
+                                    <div class="price-table__row__price price-table__row__price--rush">
+                                        Rush <br><span class="price-table__row__price--cost">
+                                            $75
+                                        </span>
+                                    </div>
+                                    <div class="price-table__row__desc price-table__row__desc--rush">
+                                        First attempt within 5 days. <br>
+                                        All 3 attempts within 10 days.
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    
+                </div>
+                
+                
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-3">
+                            <div data-include-html="right-col.html"></div>
+                        </div>
+                    </div>   
+        </main>
+    </div>
+    <div data-include-html="footer.html"></div>
+    <!-- begin js files-->
+    <!-- includes Bootstrap v4.2.1, JQuery v3.3.1 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+    <!-- end js files -->
+</body>
+
+</html>

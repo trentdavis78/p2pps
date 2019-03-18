@@ -28,7 +28,7 @@
       for (i = 0; i < z.length; i++) {
         elmnt = z[i];
         /*search for elements with a certain atrribute:*/
-        file = elmnt.getAttribute("w3-include-html");
+        file = elmnt.getAttribute("data-include-html");
         if (file) {
           /*make an HTTP request using the attribute value as the file name:*/
           xhttp = new XMLHttpRequest();
@@ -37,7 +37,7 @@
               if (this.status == 200) { elmnt.innerHTML = this.responseText; }
               if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
               /*remove the attribute, and call this function once more:*/
-              elmnt.removeAttribute("w3-include-html");
+              elmnt.removeAttribute("data-include-html");
               includeHTML();
             }
           }
@@ -52,8 +52,8 @@
 </head>
 
 <body>
-  <div w3-include-html="header.html"></div>
-  <div class="jumbotron jumbotron-fluid jumbotron__header jumbotron__header--home">
+  <div data-include-html="header.html"></div>
+  <div class="jumbotron jumbotron-fluid jumbotron__header jumbotron__header--img jumbotron__header--img-home">
     <div class="container">
       <div class="jumbotron__header__heading">
         <h1 class="text-white jumbotron__header__heading--primary">Welcome!</h1>
@@ -89,39 +89,7 @@
           </div>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-3">
-          <div class="card card-custom">
-            <div class="card-header">
-              <h2>Hours & Info</h2>
-            </div>
-            <div class="card-body card-custom__body card-custom__body--right-col">
-              <div class="address-icon contact-icons"></div>
-              <address class="vcard">
-                <div class="fn org hidden">Pole to Pole Process Servers, LLC</div>
-                <div class="adr">
-                  <div class="street-address">3616 Far West Blvd.<br>
-                    Suite #117-407
-                  </div>
-                  <span class="locality">Austin</span>, <span class="region">TX</span>&nbsp;&nbsp;<span
-                    class="postal-code">78731</span>
-                </div>
-              </address>
-              <div class="phone phone-icon contact-icons">
-                <a href="tel:1-512-706-5435">512.706.5435</a> || <a href="tel:1-512-587-0938">512.587.0938</a>
-              </div>
-
-              <div class="email email-icon contact-icons">
-                <a href="mailto:office@poletopoleprocessservers.com">office@poletopoleprocessservers.com</a>
-              </div>
-              <div class="hours calendar-icon contact-icons">
-                  Mon - Sat 8:00 am to 7:00 pm
-              </div>
-              <div class="clearfix"></div>
-              <div class="card-custom__body__img mt-3">
-                <img class="card-custom__body__img--home" src="assets/images/hablamos-espac3b1olb386.png"
-                  alt="Hablamos Espanol" />
-              </div>
-            </div>
-          </div>
+            <div data-include-html="right-col.html"></div>
         </div>
       </div>
         <div class="row">
@@ -169,7 +137,7 @@
                                 <tr>
                                   <td class="align-middle" style="width:16%">
                                     <div class="card-custom__body--testimonial-image">
-                                      <img class="img-fluid" src="http://lorempixel.com/150/151/people" alt="">
+                                      <img class="img-fluid" src="http://lorempixel.com/150/150/people" alt="">
                                     </div>
                                   </td>
                                   <td class="align-middle pl-4">
@@ -196,7 +164,7 @@
                                   <tr>
                                     <td class="align-middle" style="width:16%">
                                       <div class="card-custom__body--testimonial-image">
-                                        <img class="img-fluid" src="http://lorempixel.com/151/150/people" alt="">
+                                        <img class="img-fluid" src="http://lorempixel.com/150/150/people" alt="">
                                       </div>
                                     </td>
                                     <td class="align-middle pl-4">
@@ -225,7 +193,7 @@
 
     </main>
   </div>
-  <div w3-include-html="footer.html"></div>
+  <div data-include-html="footer.html"></div>
   <!-- begin js files-->
   <!-- includes Bootstrap v4.2.1, JQuery v3.3.1 -->
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
