@@ -143,6 +143,9 @@ h2 {
   .navbar-nav .nav-item.nav-link:not(:last-child) {
     margin-right: 2rem; }
 
+.collapse.show {
+  margin-top: 2rem; }
+
 .logo__img--sm {
   width: 6rem;
   position: absolute;
@@ -218,6 +221,10 @@ h2 {
     color: #315870; }
     .card-custom__body--right-col .contact-icons a {
       padding-left: .8rem; }
+    .card-custom__body--right-col .contact-icons.email-icon {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
   .card-custom__body--right-col .address-icon::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;

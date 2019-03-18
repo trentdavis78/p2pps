@@ -52,6 +52,12 @@
                 & a {
                     padding-left: .8rem;
                 }
+
+                &.email-icon {
+                    white-space: nowrap; 
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
             & .address-icon::before {              
                     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f3c5";               
