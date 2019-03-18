@@ -122,6 +122,9 @@ h2 {
 .primary-color {
   color: #315870; }
 
+.hidden {
+  display: none; }
+
 .navbar-custom {
   padding: 2rem; }
 
@@ -191,14 +194,34 @@ h2 {
   margin: .5rem;
   min-width: 7.5rem; }
 
-.card-custom__body--right-col i {
-  padding-right: .5rem; }
-
-.card-custom__body--right-col li {
+.card-custom__body--right-col {
   font-size: 1.6rem; }
-
-.card-custom__body--right-col li:nth-child(2) {
-  padding-left: 2.1rem; }
+  .card-custom__body--right-col .contact-icons {
+    float: left;
+    margin-right: 1rem;
+    color: #315870; }
+    .card-custom__body--right-col .contact-icons a {
+      padding-left: .8rem; }
+  .card-custom__body--right-col .address-icon::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f3c5"; }
+  .card-custom__body--right-col address {
+    float: left;
+    margin-left: .5rem; }
+  .card-custom__body--right-col .phone-icon::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f095"; }
+  .card-custom__body--right-col .email-icon::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0e0"; }
+  .card-custom__body--right-col .calendar-icon::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f073";
+    padding-right: .8rem; }
 
 .card-custom__footer h3 {
   text-transform: uppercase;
