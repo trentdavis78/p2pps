@@ -52,3 +52,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+a:link, a:visited {
+	color: $color-primary;
+}
+
+a:hover, a:active {
+	color: $color-primary-light;
+	text-decoration: none;
+}

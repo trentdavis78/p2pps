@@ -72,6 +72,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+a:link, a:visited {
+  color: #315870; }
+
+a:hover, a:active {
+  color: #3E69E1;
+  text-decoration: none; }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -105,6 +112,16 @@ h2 {
 .card-custom {
   font-size: 2rem; }
 
+.blockquote {
+  font-size: 1.8rem; }
+
+@media only screen and (max-width: 600px) {
+  .blockquote {
+    font-size: 1.2rem; } }
+
+.primary-color {
+  color: #315870; }
+
 .navbar-custom {
   padding: 2rem; }
 
@@ -127,6 +144,14 @@ h2 {
   position: absolute;
   left: 17.5rem;
   top: 1.5rem; }
+
+.footer-row {
+  background-color: #315870;
+  color: #fff;
+  min-height: 20rem; }
+  .footer-row__container {
+    text-align: center;
+    margin-top: 10rem; }
 
 .btn-theme {
   background: #315870;
@@ -156,6 +181,24 @@ h2 {
 .card-custom__body__img {
   width: 100%;
   text-align: center; }
+
+.card-custom__body--testimonial-body {
+  min-height: 20rem; }
+
+.card-custom__body--testimonial-image img {
+  border-radius: 50rem;
+  float: left;
+  margin: .5rem;
+  min-width: 7.5rem; }
+
+.card-custom__body--right-col i {
+  padding-right: .5rem; }
+
+.card-custom__body--right-col li {
+  font-size: 1.6rem; }
+
+.card-custom__body--right-col li:nth-child(2) {
+  padding-left: 2.1rem; }
 
 .card-custom__footer h3 {
   text-transform: uppercase;

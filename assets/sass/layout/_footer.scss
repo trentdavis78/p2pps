@@ -1,0 +1,10 @@
+.footer-row {
+    background-color: $color-primary;
+    color: $color-white;
+    min-height: 20rem;
+
+    &__container {
+        text-align: center;     
+        margin-top: 10rem;
+    }
+}
