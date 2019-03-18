@@ -93,21 +93,27 @@ h2 {
   color: #315870;
   font-family: Roboto, sans-serif;
   line-height: 1; }
-  .logo__text--primary, .logo__text--secondary {
+  .logo__text--lg-primary, .logo__text--lg-secondary, .logo__text--sm-primary, .logo__text--sm-secondary {
     display: block; }
-  .logo__text--primary {
-    font-size: 2.75rem;
+  .logo__text--lg-primary, .logo__text--sm-primary {
     font-weight: 700;
     border-bottom: 0.3rem solid #315870;
     margin-left: -.5rem; }
-  .logo__text--secondary {
-    font-size: 1.7rem;
+  .logo__text--lg-secondary, .logo__text--sm-secondary {
     font-style: italic;
     letter-spacing: .33rem;
     padding-top: .3rem;
     text-align: center;
     font-weight: 500;
     text-transform: uppercase; }
+  .logo__text--lg-primary {
+    font-size: 2.75rem; }
+  .logo__text--lg-secondary {
+    font-size: 1.7rem; }
+  .logo__text--sm-primary {
+    font-size: 2.4rem; }
+  .logo__text--sm-secondary {
+    font-size: 1.3rem; }
 
 .card-custom {
   font-size: 2rem; }
@@ -137,13 +143,23 @@ h2 {
   .navbar-nav .nav-item.nav-link:not(:last-child) {
     margin-right: 2rem; }
 
-.logo__img {
+.logo__img--sm {
+  width: 6rem;
+  position: absolute;
+  top: .3rem; }
+
+.logo__img--lg {
   position: absolute;
   width: 12rem;
   top: 0.5rem;
   z-index: 2; }
 
-.logo__text {
+.logo__text--sm {
+  position: absolute;
+  top: 1rem;
+  left: 9rem; }
+
+.logo__text--lg {
   position: absolute;
   left: 17.5rem;
   top: 1.5rem; }

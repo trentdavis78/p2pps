@@ -1,6 +1,6 @@
-  <!-- Load Facebook SDK for JavaScript -->
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
@@ -8,26 +8,35 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom">
-    <div class="navbar-brand ml-5 logo">
-        <figure class="logo__shape">
-            <img class="logo__img" src="assets/images/logo.svg" alt="Logo" />
-        </figure>      
-      <div class="logo__text">
-        <span class="logo__text--primary">Pole to Pole, LLC</span>
-        <span class="logo__text--secondary">Process&nbsp;&nbsp;Servers</span>
-      </div>
+  <div class="navbar-brand ml-5 logo d-none d-sm-none d-md-none d-lg-block d-xl-block">
+    <figure class="logo__shape">
+      <img class="logo__img logo__img--lg" src="assets/images/logo.svg" alt="Logo" />
+    </figure>
+    <div class="logo__text logo__text--lg">
+      <span class="logo__text--lg-primary">Pole to Pole, LLC</span>
+      <span class="logo__text--lg-secondary">Process&nbsp;&nbsp;Servers</span>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ml-auto mr-5">
-        <a class="nav-item nav-link" href="#">Home</a>
-        <a class="nav-item nav-link" href="#">Who We Are</a>
-        <a class="nav-item nav-link" href="#">Service of Process</a>            
-        <a class="nav-item nav-link" href="#">More</a>    
-        <a class="nav-item nav-link" href="#">Contact</a>    
-      </div>
+  </div>
+  <div class="navbar-brand logo d-block d-sm-block d-md-block d-lg-none d-xl-none">
+    <figure class="logo__shape">
+      <img class="logo__img logo__img--sm" src="assets/images/logo.svg" alt="Logo" />
+    </figure>
+    <div class="logo__text logo__text--sm">
+      <span class="logo__text--sm-primary">Pole to Pole, LLC</span>
+      <span class="logo__text--sm-secondary">Process&nbsp;&nbsp;Servers</span>
     </div>
-  </nav>
-  
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto mr-5">
+      <a class="nav-item nav-link" href="#">Home</a>
+      <a class="nav-item nav-link" href="#">Who We Are</a>
+      <a class="nav-item nav-link" href="#">Service of Process</a>
+      <a class="nav-item nav-link" href="#">More</a>
+      <a class="nav-item nav-link" href="#">Contact</a>
+    </div>
+  </div>
+</nav>

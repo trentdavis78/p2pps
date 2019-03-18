@@ -19,15 +19,33 @@
 .logo {
 
     &__img {
-        position: absolute; 
-        width:12rem; 
-        top:0.5rem; 
-        z-index: 2;
+
+        &--sm {
+            width: 6rem;     
+            position: absolute; 
+            top: .3rem;
+        }
+
+        &--lg {
+            position: absolute; 
+            width:12rem; 
+            top:0.5rem; 
+            z-index: 2;
+        }
     }
 
     &__text {
-        position: absolute;
-        left: 17.5rem;
-        top: 1.5rem;
+
+        &--sm {
+            position: absolute; 
+            top: 1rem;
+            left: 9rem;
+        }
+
+        &--lg {
+            position: absolute;
+            left: 17.5rem;
+            top: 1.5rem;
+        }
     }
 }
