@@ -55,7 +55,8 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1;
+  overflow-x: hidden; }
 
 ol, ul {
   list-style: none; }
@@ -143,8 +144,9 @@ h2 {
   .navbar-nav .nav-item.nav-link:not(:last-child) {
     margin-right: 2rem; }
 
-.collapse.show {
-  margin-top: 2rem; }
+@media only screen and (max-width: 768px) {
+  .navbar-collapse {
+    margin-top: 2rem; } }
 
 .logo__img--sm {
   width: 6rem;
