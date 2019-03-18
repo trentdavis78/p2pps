@@ -308,6 +308,7 @@ h2 {
   padding: .5rem 1rem;
   color: #fff;
   font-weight: 700;
+  min-height: 6.5rem;
   box-shadow: 0.75rem 0.75rem 0 rgba(0, 0, 0, 0.2); }
   .price-table__row__desc--reg {
     background-color: #217a3b; }
@@ -316,4 +317,24 @@ h2 {
   .price-table__row__desc--priority {
     background-color: #ae7316; }
   .price-table__row__desc--sameday {
-    background-color: #9b1512; }
+    background-color: #9b1512;
+    vertical-align: middle; }
+
+.price-nav li {
+  margin: .25rem; }
+
+.nav-pills .nav-link {
+  background-color: #eee; }
+
+.nav-pills .nav-link.active {
+  background-color: #315870; }
+
+@media only screen and (max-width: 768px) {
+  .price-table__row__desc {
+    font-size: 1.2rem;
+    min-height: 5rem;
+    margin-top: 2rem; }
+  .price-table__row__price {
+    font-size: 1.6rem;
+    padding: 1rem;
+    width: 29%; } }

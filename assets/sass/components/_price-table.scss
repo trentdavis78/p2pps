@@ -44,6 +44,7 @@
     padding: .5rem 1rem;
     color: $color-white;
     font-weight: 700;
+    min-height: 6.5rem;
     box-shadow: .75rem .75rem 0 rgba($color-black, .2);
     &--reg {
         background-color: $color-green;        
@@ -56,5 +57,28 @@
     }
     &--sameday {
         background-color: $color-red;
+        vertical-align: middle;
     }
 } 
+.price-nav li {
+    margin: .25rem;
+}
+.nav-pills .nav-link {
+    background-color: $color-grey-light;
+}
+.nav-pills .nav-link.active {
+    background-color: $color-primary;
+}
+
+@media only screen and (max-width: 768px) {
+    .price-table__row__desc {
+        font-size: 1.2rem;
+        min-height: 5rem;
+        margin-top: 2rem;
+    }
+    .price-table__row__price {
+        font-size: 1.6rem;      
+        padding: 1rem;
+        width: 29%;
+    }
+}
