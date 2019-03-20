@@ -1,13 +1,17 @@
 .card-custom {
-
+    min-height: 41.3rem;
     &__header {
         background: $color-primary;
         
     }
 
+    h2 {
+        font-size: 2rem;
+    }
+
     &__body {
 
-        &--home {
+        &--home, &--other {
             margin: 3rem;
             & ul   {
                 list-style-type: disc;
@@ -15,10 +19,17 @@
 
             & li {
                 color: $color-grey-medium;
-                font-weight: 500;
-                margin-bottom: 2.5rem;
+                font-weight: 500;                
             }            
         }
+
+        &--home {
+
+            & li {
+                margin-bottom: 2.5rem;
+            }
+        }
+
 
         &__img {
            width: 100%;

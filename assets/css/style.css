@@ -138,6 +138,9 @@ h2 {
   .blockquote {
     font-size: 1.2rem; } }
 
+strong {
+  font-weight: 900; }
+
 .primary-color {
   color: #315870; }
 
@@ -202,69 +205,68 @@ h2 {
   .btn-theme a:hover {
     text-decoration: none; }
 
-.card-custom__header {
-  background: #315870; }
-
-.card-custom__body--home {
-  margin: 3rem; }
-  .card-custom__body--home ul {
-    list-style-type: disc; }
+.card-custom {
+  min-height: 41.3rem; }
+  .card-custom__header {
+    background: #315870; }
+  .card-custom h2 {
+    font-size: 2rem; }
+  .card-custom__body--home, .card-custom__body--other {
+    margin: 3rem; }
+    .card-custom__body--home ul, .card-custom__body--other ul {
+      list-style-type: disc; }
+    .card-custom__body--home li, .card-custom__body--other li {
+      color: #7a7c84;
+      font-weight: 500; }
   .card-custom__body--home li {
-    color: #7a7c84;
-    font-weight: 500;
     margin-bottom: 2.5rem; }
-
-.card-custom__body__img {
-  width: 100%;
-  text-align: center; }
-
-.card-custom__body--testimonial-body {
-  min-height: 20rem; }
-
-.card-custom__body--testimonial-image img {
-  border-radius: 50rem;
-  float: left;
-  margin: .5rem;
-  min-width: 7.5rem; }
-
-.card-custom__body--right-col {
-  font-size: 1.6rem; }
-  .card-custom__body--right-col .contact-icons {
+  .card-custom__body__img {
+    width: 100%;
+    text-align: center; }
+  .card-custom__body--testimonial-body {
+    min-height: 20rem; }
+  .card-custom__body--testimonial-image img {
+    border-radius: 50rem;
     float: left;
-    margin-right: 1rem;
-    color: #315870; }
-    .card-custom__body--right-col .contact-icons a {
-      padding-left: .8rem; }
-    .card-custom__body--right-col .contact-icons.email-icon {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-  .card-custom__body--right-col .address-icon::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f3c5"; }
-  .card-custom__body--right-col address {
-    float: left;
-    margin-left: .5rem; }
-  .card-custom__body--right-col .phone-icon::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f095"; }
-  .card-custom__body--right-col .email-icon::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f0e0"; }
-  .card-custom__body--right-col .calendar-icon::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f073";
-    padding-right: .8rem; }
-
-.card-custom__footer h3 {
-  text-transform: uppercase;
-  color: #7a7c84;
-  font-weight: 600;
-  font-size: 1.6rem; }
+    margin: .5rem;
+    min-width: 7.5rem; }
+  .card-custom__body--right-col {
+    font-size: 1.6rem; }
+    .card-custom__body--right-col .contact-icons {
+      float: left;
+      margin-right: 1rem;
+      color: #315870; }
+      .card-custom__body--right-col .contact-icons a {
+        padding-left: .8rem; }
+      .card-custom__body--right-col .contact-icons.email-icon {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+    .card-custom__body--right-col .address-icon::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f3c5"; }
+    .card-custom__body--right-col address {
+      float: left;
+      margin-left: .5rem; }
+    .card-custom__body--right-col .phone-icon::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f095"; }
+    .card-custom__body--right-col .email-icon::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f0e0"; }
+    .card-custom__body--right-col .calendar-icon::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f073";
+      padding-right: .8rem; }
+  .card-custom__footer h3 {
+    text-transform: uppercase;
+    color: #7a7c84;
+    font-weight: 600;
+    font-size: 1.6rem; }
 
 .jumbotron__header {
   position: relative; }
@@ -284,6 +286,10 @@ h2 {
       background-image: url(../images/court.jpg); }
     .jumbotron__header--img-contact {
       background-image: url(../images/contact-us.jpg); }
+    .jumbotron__header--img-about {
+      background-image: url(../images/pencil.jpg); }
+    .jumbotron__header--img-other {
+      background-image: url(../images/chess.jpg); }
 
 .price-table__row__price {
   background-color: #fff;
