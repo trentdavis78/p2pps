@@ -211,6 +211,8 @@ strong {
     background: #315870; }
   .card-custom h2 {
     font-size: 2rem; }
+  .card-custom__body--about {
+    font-size: 1.6rem; }
   .card-custom__body--home, .card-custom__body--other {
     margin: 3rem; }
     .card-custom__body--home ul, .card-custom__body--other ul {

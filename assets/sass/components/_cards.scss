@@ -10,7 +10,9 @@
     }
 
     &__body {
-
+        &--about {
+            font-size: 1.6rem;
+        }
         &--home, &--other {
             margin: 3rem;
             & ul   {
